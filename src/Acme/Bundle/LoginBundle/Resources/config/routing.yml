@@ -1,0 +1,8 @@
+acme_login_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: AcmeLoginBundle:Default:index }
+
+
+login:
+    path:    /login
+    defaults: { _controller: AcmeLoginBundle:Default:login }

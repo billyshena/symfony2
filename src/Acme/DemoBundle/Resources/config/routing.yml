@@ -1,0 +1,45 @@
+_welcome:
+    path:     /
+    defaults: { _controller: AcmeDemoBundle:Welcome:index }
+
+_demo_secured:
+    resource: "@AcmeDemoBundle/Controller/SecuredController.php"
+    type:     annotation
+
+_demo:
+    resource: "@AcmeDemoBundle/Controller/DemoController.php"
+    type:     annotation
+    prefix:   /demo
+
+homepage:
+    path:    /api
+    defaults: { _controller: AcmeDemoBundle:Demo:say }
+
+
+view_product:
+    path:    /product/view/{id}
+    defaults: { _controller: AcmeDemoBundle:Demo:view }
+
+hello_world:
+    path:    /hello
+    defaults: { _controller: AcmeDemoBundle:Demo:hello }
+
+request:
+    path:    /request
+    defaults: { _controller: AcmeDemoBundle:Demo:request }
+
+session:
+    path:    /session
+    defaults: { _controller: AcmeDemoBundle:Demo:session }
+
+flash:
+    path:    /flash
+    defaults: { _controller: AcmeDemoBundle:Demo:flash }
+
+user_create:
+    path:    /create
+    defaults: { _controller: AcmeDemoBundle:Demo:create }
+
+user_show:
+    path:    /show
+    defaults: { _controller: AcmeDemoBundle:Demo:show }
